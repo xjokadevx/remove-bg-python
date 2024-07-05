@@ -1,6 +1,7 @@
 from typing import Union
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
+from models.ImageRequest import ImageRequest
 
 app = FastAPI()
 
@@ -11,7 +12,7 @@ def read_root():
 
 
 @app.post("/remove-bg")
-def remove_bg(req: Request):
+def remove_bg(imgRequest: ImageRequest):
     try:
       print(x)
     except:
